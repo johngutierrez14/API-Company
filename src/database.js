@@ -1,17 +1,15 @@
-import { mysql } from "mysql2/promise";
+import mysql from "mysql2/promise";
 
 try {
   const connection = mysql.createPool({
     host: "localhost",
     user: "root",
     password: "",
-    database: "db_company",
-    port: 3306,
+    database: "company_db",
+    port: 3302,
   });
 
-  connection.release();
+  module.exports = connection;
 } catch (err) {
   console.log(err);
 }
-
-module.exports = connection;

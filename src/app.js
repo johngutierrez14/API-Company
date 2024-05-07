@@ -1,5 +1,5 @@
-import { express } from "express";
-import { morgan } from "morgan";
+import express from "express";
+import morgan from "morgan";
 
 import pkg from "../package.json";
 import ProductsRoutes from "./routes/products.routes";

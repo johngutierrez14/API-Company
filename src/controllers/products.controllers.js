@@ -24,8 +24,14 @@ export const createProduct = async (req, res) => {
   }
 };
 
-export const getProducts = (req, res) => {
-  res.json("Get all Products");
+export const getProducts = async (req, res) => {
+  try {
+    const [row, fields] = await connection.query('SELECT * FROM products')
+    res.json(rows);
+  } catch (error) {
+    onsole.error("Error creating product: ", error);
+    res.status(500).send("Internal server error.");
+  }
 };
 export const getProduct = (req, res) => {
   res.json("Get Product by Id");
