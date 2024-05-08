@@ -5,8 +5,8 @@ import * as productsCtrl from "../controllers/products.controllers";
 
 router.get("/", productsCtrl.getProducts);
 router.post("/", productsCtrl.createProduct);
-router.get("/:productId", productsCtrl.getProduct);
-router.put("/:productId", productsCtrl.updateProduct);
-router.delete("/:productId", productsCtrl.deleteProduct);
+router.get("/:id", productsCtrl.getProduct);
+router.put("/:id", productsCtrl.updateProduct);
+router.delete("/:id", productsCtrl.deleteProduct);
 
 export default router;
